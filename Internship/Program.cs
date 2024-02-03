@@ -624,8 +624,8 @@ namespace Program.Xlsx
             MailMessage message = new MailMessage();
 
             message.Subject = "Statistically: Tasks and Incident";
-            message.From = new MailAddress("sefora.balog@plexus.com");
-            message.To.Add(new MailAddress("sefora.balog@plexus.com"));
+            message.From = new MailAddress("ex.email");
+            message.To.Add(new MailAddress("ex.email"));
             message.IsBodyHtml = true;
             message.Body = "<h2> Hello ,</h2>\n" +
             "<h4>Current status of incidents and tasks until: " + DateTime.Now.ToString("MM/dd/yyyy") + "</h4>" +
@@ -670,7 +670,7 @@ namespace Program.Xlsx
             smtp.Port = 25;
             smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
             smtp.UseDefaultCredentials = true;
-            smtp.Host = "Dcc-mail-mx-003.na.plexus.com";
+            smtp.Host = "ex";
             smtp.Send(message);
             //pagina de html
 
